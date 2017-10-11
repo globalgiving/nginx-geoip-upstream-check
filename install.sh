@@ -2,7 +2,7 @@
 
 # PGP key & update site for maxmind (geoip DB updater)
 apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-keys DE1997DCDE742AFA
-echo "deb http://ppa.launchpad.net/maxmind/ppa/ubuntu wily main" >> /etc/apt/sources.list
+echo "deb http://ppa.launchpad.net/maxmind/ppa/ubuntu xenial main" >> /etc/apt/sources.list
 
 apt-get update
 apt-get install --no-install-recommends --no-install-suggests -y libperl-dev libgeoip-dev ca-certificates gettext-base geoipupdate git gcc wget libpcre3-dev libssl-dev make build-essential zlib1g-dev libbz2-dev unzip
