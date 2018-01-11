@@ -1,4 +1,4 @@
-FROM ubuntu:wily
+FROM ubuntu:xenial
 MAINTAINER Justin Rupp <jrupp@globalgiving.org>
  
 COPY ./install.sh /tmp/install.sh
@@ -9,7 +9,7 @@ RUN ln -sf /dev/stdout /var/log/nginx/access.log \
 	&& ln -sf /dev/stderr /var/log/nginx/error.log
 
 COPY GeoIP.conf /etc/
-RUN mkdir /usr/share/GeoIP && geoipupdate
+RUN mkdir -p /usr/share/GeoIP && geoipupdate
 
 EXPOSE 80 443
 
